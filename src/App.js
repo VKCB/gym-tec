@@ -3,9 +3,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Login } from "./components/Login";
 import { Register } from "./components/Register";
 import { Tabla } from "./components/Tabla";
-import { SortingTable } from "./components/SortingTable";
-import { FilteringTable } from "./components/FilteringTable";
-import { PagintationTable } from "./components/PaginationTable";
 
 /*
       <Router>
@@ -37,7 +34,7 @@ function App() {
 
   return (
     <div>
-      <PagintationTable />
+      <Tabla />
     </div>
   );
 }
