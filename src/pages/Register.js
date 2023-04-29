@@ -21,7 +21,12 @@ const initialForm = {
     password: "", /*Este debe estar encriptado en MD5 */
 };
 
+function change_log_in() {
+    window.location = "/"
+}
+
 export const Register = (props) => {
+
     /* constantes que se utilizan para guardar informacion*/
     const [Cedula, setCedula] = useState('');
     const [pass, setPass] = useState('');
@@ -152,7 +157,8 @@ export const Register = (props) => {
 
                 <button type="submit" className="register_btn">Registrar</button><br />
 
-                <button onClick={() => props.onFormSwitch('login')} className="loggear_btn">Ya tenes cuenta? Has Login aqui.</button>
+                {/* () => props.onFormSwitch('login') */}
+                <button onClick={change_log_in} className="loggear_btn">Ya tenes cuenta? Has Login aqui.</button>
             </form>
         </div>
     )

@@ -4,7 +4,7 @@ import { FaBars, Fabars, FaTimes } from "react-icons/fa";
 import Logo from '../assets/Gym-icon.png';
 import "../styles/Navbar.css"
 
-function Navbar() {
+export const Navbar = () => {
     const navRef = useRef();
 
     const showNavbar = () => {
@@ -12,12 +12,20 @@ function Navbar() {
     }
 
     return (
-        <header>
+        <header className="header">
             <div className="logo">
                 <img src={Logo} alt="Logo"/> 
             </div>
             <nav ref={navRef}>
-                <Link to='/'>Home</Link>
+                {/* Aqui van todos los links del navbar*/}
+                <Link to='/Sucursales'>Sucursales</Link>
+                <Link to='/Spa'>Spa</Link>
+                <Link to='/Puestos'>Puestos</Link>
+                <Link to='/Planilla'>Planilla</Link>
+                <Link to='/Empleados'>Empleados</Link>
+                <Link to='/Tipos_Equipo'>Tipos de equipo</Link>
+                <Link to='/Inventario'>Inventario</Link>
+                <Link to='/Productos'>Productos</Link>
                 <button className="nav-btn nav-close-btn" onClick={showNavbar}>
                     <FaTimes />
                 </button>
@@ -29,4 +37,4 @@ function Navbar() {
     );
 }
 
-export default Navbar
+/*export default Navbar;*/

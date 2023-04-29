@@ -1,6 +1,23 @@
 import React, { useState } from "react"
 import "../styles/Login.css";
 
+function validation() {
+    var user, password;
+
+    user = document.getElementById('Usuario').value;
+    password = document.getElementById('password').value;
+
+    if (user === "Administrador" && password === "12345") {
+        window.location = "Sucursales"
+    } else {
+        alert("Usuario o contraseña incorrectos");
+    }
+}
+
+function change_register() {
+    window.location = "Register"
+}
+
 export const Login = (props) => {
     const [Usuario, setUsuario] = useState('');
     const [pass, setPass] = useState('');
@@ -29,10 +46,12 @@ export const Login = (props) => {
                     name="password"
                     className="login_input"></input>
 
-                <button type="submit" className="login_btn">Log In</button>
+                <button type="submit" className="login_btn" onClick={validation}>Log In</button>
 
-                <button onClick={() => props.onFormSwitch('register')}
-                    className="registrar_btn">No tienes cuenta? Registrate aqui.</button>
+                {/* () => props.onFormSwitch('register') */}
+                <button onClick={change_register} 
+                    className="registrar_btn">No tienes cuenta? Registrate aqui.
+                </button>
             </form>
 
         </div>
