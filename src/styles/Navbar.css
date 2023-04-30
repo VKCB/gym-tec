@@ -7,10 +7,10 @@
     font-family: 'Titillium Web', sans-serif;
 }
 :root {
-    --mainColor: #343838;
+    --mainColor: hsl(218, 36%, 9%);
     --mainColorLight: white;
-    --secondaryColor: #005F6B;
-    --textColor: #eee;
+    --secondaryColor: white;
+    --textColor: hsl(187, 13%, 63%);
 }
 
 header {

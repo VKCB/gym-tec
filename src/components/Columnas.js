@@ -26,7 +26,7 @@ export const Columnas = [
         accessor: 'empleado_admin',
     },
     {
-        Header: 'Capacidad Maxima',
+        Header: 'Capacidad',
         accessor: 'capacidad_maxima',
     },
     {
