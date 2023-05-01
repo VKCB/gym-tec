@@ -1,18 +1,12 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar  from "./components/Navbar";
+import Navbar from "./components/Navbar";
 import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
 import { Sucursales } from "./pages/Sucursales";
 import { Modal } from "./components/Modal";
+import SucursalesAPI from "./pages/SucursalesAPI";
 
-/*
-      
-
-              <div>
-      <Tabla />
-    </div>
-*/
 
 function App() {
 
@@ -31,22 +25,23 @@ function App() {
 
     <Tabla />
 
+<Router>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/Register" element={<Register />} />
+          <Route path="/Sucursales" element={<Sucursales />} />
+        </Routes>
+      </Router>
 
 
+      
   */
 
 
   return (
     <>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/Register" element={<Register/>} />
-          <Route path="/Sucursales" element={<Sucursales/>} />
-        </Routes>
-      </Router>
+      <SucursalesAPI />
     </>
-
   );
 }
 

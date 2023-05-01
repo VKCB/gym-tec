@@ -1,10 +1,10 @@
 .modal-container {
-    position: fixed;
+    position:absolute;
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    padding-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,7 +12,7 @@
 }
 
 /* No utilizar la palabra modal por si sola ya que no lo detecta,
-probablemente ya exista otra clase con ese nombre*/
+probablemente ya exista otra clase con ese nombre, puede ser que venga de bootstrap*/
 .modal-cuadro {
     border-radius: 5px;
     padding: 2rem;
@@ -51,4 +51,47 @@ probablemente ya exista otra clase con ese nombre*/
 
 .form-group label {
     margin-bottom: 0.2rem;
+}
+
+
+/* CSS */
+.button-27 {
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 40px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+.button-27:disabled {
+  pointer-events: none;
+}
+
+.button-27:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-27:active {
+  box-shadow: none;
+  transform: translateY(0);
 }
